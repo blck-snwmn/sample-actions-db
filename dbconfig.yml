@@ -1,0 +1,8 @@
+local:
+    dialect: postgres
+    datasource: host=localhost dbname=postgres user=test_user password=test_pass sslmode=disable
+    dir: migrations
+actions:
+    dialect: postgres
+    datasource: host=${DATABASE_HOST} dbname=${DATABASE_NAME} user=${DATABASE_USER} password=${DATABASE_PASSWORD}  sslmode=disable
+    dir: migrations
