@@ -30,7 +30,7 @@ jobs:
         id: go-migration
         run: |
           result="$(./third_party/bin/sql-migrate up -dryrun -env actions | sed -z 's/\n/%0A/g')"
-          echo ::set-output name=test::$result
+          echo "test=$result" >> $GITHUB_OUTPUT
 
       - name: Comment
         uses: actions/github-script@v4
